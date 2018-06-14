@@ -1,0 +1,89 @@
+find testCat2 -iname "*.m"
+
+find testCat2 -iname "*.m" -exec cp {} /testCat3 \;
+
+ find 路径 -name "*.c" -exec cp {} 目标目录 \;
+
+
+1.当前目录下查找文件
+find . -name test.txt 
+
+2.指定目录下查找
+find /root/ -name test.txt
+
+3.忽略大小写查找
+find . -iname test.txt
+
+ #  -name       //根据文件名查找（精确查找）
+ #  -iname      //根据文件名查找，但是不区分大小写 
+
+4.查找目录
+ find . -type d -name test
+ -type
+ f     // 普通文件
+
+ d     //目录文件
+
+ l     //链接文件
+
+ b     //块设备文件
+
+ c     //字符设备文件
+
+ p     //管道文件
+
+ s     //socket文件
+
+5.按文件权限查找
+-perm	//根据文件权限查找文件
+find  tmp  -perm  755 // 查找在/tmp目录下权限是755的文件
+find . -type f -perm 0777 -print	// 查找文件权限是777的
+
+
+#find  /tmp  –atime  +5           //表示查找在五天内没有访问过的文件
+#find  /tmp  -atime  -5           //表示查找在五天内访问过的文件
+
+#-atime
+
+#-mtime
+
+#-ctime
+
+#-amin
+
+#-mmin
+#-cmin
+
+所以这里atime,mtime,ctime就是分别对应的“最近一次访问时间”“最近一次内容修改时间”“最近一次属性修改时间”，这里的atime的单位指的是“天”，amin的单位是分钟  
+
+** -exec
+# -print                                 //默认情况下的动作
+
+# -ls                                    //查找到后用ls 显示出来
+
+# -ok  [commend]                //查找后执行命令的时候询问用户是否要执行 yes/no
+
+# -exec [commend]              //查找后执行命令的时候不询问用户，直接执行
+
+exec解释：
+-exec  参数后面跟的是command命令，它的终止是以;为结束标志的，所以这句命令后面的分号是不可缺少的，考虑到各个系统中分号会有不同的意义，所以前面加反斜杠。
+
+{}   花括号代表前面find查找出来的文件名。
+find / -type f -perm 0777 -print -exec chmod 644 {} \;
+反斜杠用来告诉find何时命令结束
+
+实例: ls -l命令放在find命令的-exec选项中 
+find . -type f -exec ls -l {} \;
+find ./test -name 'testFind' -exec rm {} \;	// 在当前目录及子目录找到testFind文件并删除
+
+***提取.m文件
+find . -name '*.m' -exec cp {} ./test \;
+cat *.m > test.m
+
+**cp
+# mkdir aa
+# cp -r aa ./bb    此目录下没有bb文件夹但是会创建
+# cp -r aa bb ./cc    多个源目录时目标必须要存在，否则拷贝失败
+
+
+
