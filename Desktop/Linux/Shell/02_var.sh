@@ -26,9 +26,9 @@ str='this is a string'
 name="www"
 str="Hello, I konw you are \"$name\" "
 echo $str
+
 :<<!
 双引号的优点：
-
 双引号里可以有变量
 双引号里可以出现转义字符
 !
@@ -42,19 +42,42 @@ echo $greeting $greeting_1
 # 获取字符串长度
 string="abcd"
 echo ${#string}
-
-
-
+echo
+	
 # # 查找子字符串
 string="hello"
 echo `expr $string = "hello"`
 
-string="hello,everyone my name is xiaoming"   
-echo `expr index "$string" my`
-# for file in $(ls ../Shell); do
+string="runoob is a great company"   
+echo `expr index "$string" is`
+
+#	# 数组
+# 在Shell中，用括号来表示数组，数组元素用"空格"符号分割开
+ary=(0 1 2 3 4)
+value=${ary[1]}
+echo $value
+
+# 使用@符号可以获取数组中的所有元素
+echo ${ary[@]}
+
+# 取得数组元素的个数
+length=${#ary[@]}
+echo $length
+
+# 或者
+length=${#ary[*]}
+echo $length
+
+# 取得数组单个元素的长度
+lengthn=${#ary[1]}
+echo $lengthn
+
+# {
+# 	for file in $(ls ../Shell); do
 # 	#statements
 # 	echo $file	
 # done
+# }
 
 
 
