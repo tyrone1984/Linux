@@ -51,33 +51,7 @@ echo `expr $string = "hello"`
 string="runoob is a great company"   
 echo `expr index "$string" is`
 
-#	# 数组
-# 在Shell中，用括号来表示数组，数组元素用"空格"符号分割开
-ary=(0 1 2 3 4)
-value=${ary[1]}
-echo $value
 
-# 使用@符号可以获取数组中的所有元素
-echo ${ary[@]}
-
-# 取得数组元素的个数
-length=${#ary[@]}
-echo $length
-
-# 或者
-length=${#ary[*]}
-echo $length
-
-# 取得数组单个元素的长度
-lengthn=${#ary[1]}
-echo $lengthn
-
-# {
-# 	for file in $(ls ../Shell); do
-# 	#statements
-# 	echo $file	
-# done
-# }
 
 
 

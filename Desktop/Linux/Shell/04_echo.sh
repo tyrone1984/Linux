@@ -1,3 +1,8 @@
+### echo命令
+
+#显示普通字符
+echo "It is a test"
+
 # 显示转义字符
 echo "\"It is a test\""
 
@@ -35,3 +40,5 @@ echo -e "\npassword is $password"
 #  -n 输入字符长度限制(达到6位，自动结束)
 #  -t 输入限时
 #  -s 隐藏输入内容
+
+
