@@ -40,3 +40,23 @@ if [ $(ps -ef | grep -c "ch") -gt 1 ]; then
 else
 	echo "false"
 fi
+
+int=1
+while (( $int<=5 )) ; do
+	echo $int
+	let "int++"
+done
+
+int=1
+while [[ $int -le 5 ]]; do
+	echo $int
+	let "int++"
+done
+
+
+
+
+
+
+
+

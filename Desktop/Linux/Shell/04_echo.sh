@@ -23,6 +23,9 @@ echo '$name\"'
 # 显示命令执行结果
 echo `date`
 
+# 显示的就是当前目录名。
+echo ~+
+
 # read 命令从标准输入中读取一行
 # read -p "请输入一段字符:" name				#标准输入
 # echo "$name is a test"
@@ -40,5 +43,7 @@ echo -e "\npassword is $password"
 #  -n 输入字符长度限制(达到6位，自动结束)
 #  -t 输入限时
 #  -s 隐藏输入内容
+
+
 
 

@@ -32,17 +32,6 @@ grep --color ".\{0,2\}t" 11_grep.c
 echo -e "\n"
 grep -w --color ".\{0,2\}t" 11_grep.c 	# -w被匹配的文本只能是单词
 
-echo -e "位置锚定：\n"
-grep --color ";$" 11_grep.c
-
-echo -e "锚定单词的词首:\n"
-grep --color "\<hell" 11_grep.c
-
-echo -e "锚定单词的词尾:\n"
-grep --color "\lo\>" 11_grep.c 		# grep --color "\lo\b" 11_grep.c
-
-echo -e "\B:\n"
-grep --color "\Blo" 11_grep.c
 
 :<<!
 位置锚定：
@@ -57,6 +46,38 @@ grep --color "\Blo" 11_grep.c
 
 　　　　　　\B ：与\b作用相反。
 !
+
+
+echo -e "锚定行首:\n"
+grep --color "^int" 11_grep.c
+
+echo -e "锚定行尾：\n"
+grep --color ";$" 11_grep.c
+
+echo -e "锚定单词的词首:\n"
+grep --color "\<hell" 11_grep.c
+
+echo -e "锚定单词的词尾:\n"
+grep --color "\lo\>" 11_grep.c 		# grep --color "\lo\b" 11_grep.c
+
+echo -e "\B:\n"
+grep --color "\Blo" 11_grep.c
+
+:<<!
+分组及引用：
+
+　　　　　　\(string\) ：将string作为一个整体方便后面引用
+
+　　　　　　　　\1 ：引用第1个左括号及其对应的右括号所匹配的内容。
+
+　　　　　　　　\2 ：引用第2个左括号及其对应的右括号所匹配的内容。
+
+　　　　　　　　\n ：引用第n个左括号及其对应的右括号所匹配的内容。
+!
+
+#	以相同字母开始并结尾的行
+echo -e "分组及引用：\n"
+grep --color "^\([[:alpha:]]\).*\1$" 11_grep.c
 
 
 :<<!
@@ -88,7 +109,6 @@ grep家族总共有三个：grep，egrep，fgrep。
 模式部分： 　　1、直接输入要匹配的字符串，这个可以用fgrep（fast grep）代替来提高查找速度，比如我要匹配一下hello.c文件中printf的个数：grep  -c  "printf"  hello.c
 
 2、使用基本正则表达式，下面谈关于基本正则表达式的使用：
-
 　　　　匹配字符：
 
 　　　　　　. ：任意一个字符。
