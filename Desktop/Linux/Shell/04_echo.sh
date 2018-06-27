@@ -38,6 +38,8 @@ echo ~+
 read -p "请输入一段文字:" -n 6 -t 5 -s password
 echo -e "\npassword is $password"
 
+# echo -n #不换行输出
+
 # 参数说明：
 #  -p 输入提示文字
 #  -n 输入字符长度限制(达到6位，自动结束)
