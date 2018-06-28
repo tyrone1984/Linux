@@ -6,68 +6,75 @@ if [[ MAX_NUM -lt 3 ]]; then
 	exit 1
 fi
 
-for (( i = 0; i < MAX_NUM; i++ )); do	
-	k=i
-	count=0
-	for (( j = 0; j < MAX_NUM*2 - 1; j++ )); do
-		if [[ k -lt MAX_NUM-1 || count -ge i*2+1 ]]; then
-			echo -n "*"		
+for (( i = 0; i < MAX_NUM*2-1; i++ )); do
+	for (( j = 0; j < MAX_NUM*2 - 1; j++ )); do		
+		if [[ i -lt MAX_NUM ]]; then
+			if [[ j -lt MAX_NUM-\(i+1\) || j -ge i+MAX_NUM ]]; then
+				echo -n "*"
+			else
+				if [[ -n "$1" ]]; then
+					echo -n "$1"
+				else
+					echo -n "."
+				fi
+			fi
 		else
-			echo -n "."
-			let count++
-		fi		
-		let k++
+			if [[ j -lt i-\(MAX_NUM-1\) || j -gt 3*\(MAX_NUM-1\)-i ]]; then
+				echo -n "*"	
+			else
+				if [[ -n "$1" ]]; then
+					echo -n "$1"
+				else
+					echo -n "."
+				fi
+			fi
+		fi
 	done
 	echo ""
 done
 
-
-for (( i = 0; i < MAX_NUM-1; i++ )); do	
-	# k=`expr $MAX_NUM - $i \* 2`
-	count=0	
-	for (( j = 0; j < MAX_NUM*2 - 1; j++ )); do
-		if [[ j -lt i+1 || count -ge MAX_NUM-i*2 ]]; then
-			echo -n "*"	
-		else
-			echo -n "."
-			let count++	
-		fi		
-	done
-	echo ""
-done
-
-
-if [[ MAX_NUM -lt 3 ]]; then
-	echo "I ask to enter number great than 2, Try again"
-	exit 1
-fi
-
-for (( i = 0; i < MAX_NUM; i++ )); do	
-	k=i
-	count=0
-	for (( j = 0; j < MAX_NUM*2 - 1; j++ )); do
-		if [[ k -lt MAX_NUM-1 || count -ge i*2+1 ]]; then
-			echo -n " "		
-		else
-			echo -n "."
-			let count++
-		fi		
-		let k++
-	done
-	echo ""
-done
+# for (( i = 0; i < MAX_NUM-1; i++ )); do	
+# 	for (( j = 0; j < MAX_NUM*2 - 1; j++ )); do
+# 		if [[ j -lt i+1 || j -ge MAX_NUM*2-i-2 ]]; then
+# 			echo -n " "	
+# 		else
+# 			if [[ -n "$1" ]]; then
+# 				echo -n "$1"
+# 			else
+# 				echo "."
+# 			fi
+# 		fi
+# 	done
+# 	echo ""
+# done
 
 
-for (( i = 0; i < MAX_NUM-1; i++ )); do	
-	# k=`expr $MAX_NUM - $i \* 2`
-	count=0	
-	for (( j = 0; j < MAX_NUM*2 - 1; j++ )); do
-		if [[ j -lt i+1 || count -ge MAX_NUM-i*2 ]]; then
-			echo -n " "	
-		else
-			echo -n "."
-			let count++	
-		fi		
-	done
-	echo ""
-done
+# for (( i = 0; i < MAX_NUM; i++ )); do
+# 	for (( j = 0; j < MAX_NUM*2 - 1; j++ )); do		
+# 		if [[ j -lt MAX_NUM-i-1 || j -ge i+MAX_NUM ]]; then
+# 			echo -n " "
+# 		else
+# 			if [[ -n "$1" ]]; then
+# 				echo -n "$1"
+# 			else
+# 				echo "."
+# 			fi
+# 		fi
+# 	done
+# 	echo ""
+# done
+
+# for (( i = 0; i < MAX_NUM-1; i++ )); do	
+# 	for (( j = 0; j < MAX_NUM*2 - 1; j++ )); do
+# 		if [[ j -lt i+1 || j -ge MAX_NUM*2-i-2 ]]; then
+# 			echo -n " "	
+# 		else
+# 			if [[ -n "$1" ]]; then
+# 				echo -n "$1"
+# 			else
+# 				echo "."
+# 			fi
+# 		fi
+# 	done
+# 	echo ""
+# done

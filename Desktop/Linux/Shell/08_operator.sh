@@ -129,3 +129,8 @@ if [ -w file  ]    如果文件存在且可写
 if [ -x file  ]    如果文件存在且可执行 
 !  
 
+		# if [[ -n $1 ]]; then
+			# 	echo $1
+			# else
+			# 	echo "."
+			# fi
