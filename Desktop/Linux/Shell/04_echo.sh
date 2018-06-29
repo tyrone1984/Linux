@@ -47,5 +47,7 @@ echo -e "\npassword is $password"
 #  -s 隐藏输入内容
 
 
+# 直接写入内容
+# echo "#请输入内容:" > test.txt
 
 
