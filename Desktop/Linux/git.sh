@@ -1,5 +1,5 @@
 read -p "请输入项目地址:" address
-git add $address
+git add "$address"
 
 echo $address
 echo $1
