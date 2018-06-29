@@ -1,0 +1,35 @@
+// 登录回复: APP-->设备
+- (void)loginBack {
+    Byte *mBytes = (Byte *)self.manufacturerData.bytes;
+    
+    Byte deviceID[] = {0x11, 0x02, 0X03, 0x04, 0x05, 0x06};
+
+    Byte bytes[] = {0x10, 0x0B, 0x00, 0x08, 0x01,
+        deviceID[0] ^ mBytes[5],
+        deviceID[1] ^ mBytes[6],
+        deviceID[2] ^ mBytes[7],
+        deviceID[3] ^ mBytes[8],
+        deviceID[4] ^ mBytes[9],
+        deviceID[5] ^ mBytes[10],
+        0x01, 0x01,
+    };
+    NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)/sizeof(Byte)];
+    [self.peripheral writeValue:data forCharacteristic:self.writeWNCharacteristic type:CBCharacteristicWriteWithoutResponse];
+}
+
+// 数据确认包: APP-->设备
+- (void)ackBack {
+    Byte bytes[] = {0x00, 0x01, 0x01};
+    NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)/sizeof(Byte)];
+    [self.peripheral writeValue:data forCharacteristic:self.ackWriteCharacteristic type:CBCharacteristicWriteWithoutResponse];
+}
+
+// 同步数据
+- (void)synData {
+    if (!_hasSendSyn) {
+        _hasSendSyn = YES;
+        Byte bytes[] = {0x10, 0x04, 0x48, 0x01, 0x01, 0x01};
+        NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)/sizeof(Byte)];
+        [self.peripheral writeValue:data forCharacteristic:self.writeWNCharacteristic type:CBCharacteristicWriteWithoutResponse];
+    }
+}

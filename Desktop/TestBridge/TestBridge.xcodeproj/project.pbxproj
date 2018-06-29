@@ -1,0 +1,1227 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32953F17243030F7DC47776F /* Pods_TestBridgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AF2201D24DE74A743050 /* Pods_TestBridgeUITests.framework */; };
+		387F2CB61F3AED03006DBCDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F2CB51F3AED03006DBCDB /* main.m */; };
+		387F2CB91F3AED03006DBCDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F2CB81F3AED03006DBCDB /* AppDelegate.m */; };
+		387F2CBC1F3AED03006DBCDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F2CBB1F3AED03006DBCDB /* ViewController.m */; };
+		387F2CBF1F3AED03006DBCDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387F2CBD1F3AED03006DBCDB /* Main.storyboard */; };
+		387F2CC21F3AED03006DBCDB /* TestBridge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 387F2CC01F3AED03006DBCDB /* TestBridge.xcdatamodeld */; };
+		387F2CC41F3AED03006DBCDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387F2CC31F3AED03006DBCDB /* Assets.xcassets */; };
+		387F2CC71F3AED03006DBCDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387F2CC51F3AED03006DBCDB /* LaunchScreen.storyboard */; };
+		387F2CD21F3AED04006DBCDB /* TestBridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F2CD11F3AED04006DBCDB /* TestBridgeTests.m */; };
+		387F2CDD1F3AED04006DBCDB /* TestBridgeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F2CDC1F3AED04006DBCDB /* TestBridgeUITests.m */; };
+		387F2CEC1F3AED1C006DBCDB /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387F2CEB1F3AED1C006DBCDB /* TestViewController.swift */; };
+		387F2CEE1F3AEE25006DBCDB /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387F2CED1F3AEE25006DBCDB /* SwiftTest.swift */; };
+		38B079DB1F5FA6D200F5AA13 /* jiezhi_03.zip in Resources */ = {isa = PBXBuildFile; fileRef = 38B079D91F5FA6D200F5AA13 /* jiezhi_03.zip */; };
+		38B079DC1F5FA6D200F5AA13 /* jiezhi_0715.zip in Resources */ = {isa = PBXBuildFile; fileRef = 38B079DA1F5FA6D200F5AA13 /* jiezhi_0715.zip */; };
+		38C654F61F5FD4EA00B8E138 /* crc32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654981F5FD4EA00B8E138 /* crc32.swift */; };
+		38C654F71F5FD4EA00B8E138 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654991F5FD4EA00B8E138 /* Data.swift */; };
+		38C654F81F5FD4EA00B8E138 /* DFUController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6549A1F5FD4EA00B8E138 /* DFUController.swift */; };
+		38C654F91F5FD4EA00B8E138 /* DFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6549B1F5FD4EA00B8E138 /* DFUExecutor.swift */; };
+		38C654FA1F5FD4EA00B8E138 /* DFUFirmware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6549C1F5FD4EA00B8E138 /* DFUFirmware.swift */; };
+		38C654FB1F5FD4EA00B8E138 /* DFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6549D1F5FD4EA00B8E138 /* DFUPeripheral.swift */; };
+		38C654FC1F5FD4EA00B8E138 /* DFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6549E1F5FD4EA00B8E138 /* DFUPeripheralDelegate.swift */; };
+		38C654FD1F5FD4EA00B8E138 /* DFUPeripheralSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6549F1F5FD4EA00B8E138 /* DFUPeripheralSelector.swift */; };
+		38C654FE1F5FD4EA00B8E138 /* DFUPeripheralSelectorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654A01F5FD4EA00B8E138 /* DFUPeripheralSelectorDelegate.swift */; };
+		38C654FF1F5FD4EA00B8E138 /* DFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654A11F5FD4EA00B8E138 /* DFUService.swift */; };
+		38C655001F5FD4EA00B8E138 /* DFUServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654A21F5FD4EA00B8E138 /* DFUServiceController.swift */; };
+		38C655011F5FD4EA00B8E138 /* DFUServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654A31F5FD4EA00B8E138 /* DFUServiceDelegate.swift */; };
+		38C655021F5FD4EA00B8E138 /* DFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654A41F5FD4EA00B8E138 /* DFUServiceInitiator.swift */; };
+		38C655031F5FD4EA00B8E138 /* DFUServiceSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654A51F5FD4EA00B8E138 /* DFUServiceSelector.swift */; };
+		38C655041F5FD4EA00B8E138 /* DFUStarterPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654A61F5FD4EA00B8E138 /* DFUStarterPeripheral.swift */; };
+		38C655051F5FD4EA00B8E138 /* DFUStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654A71F5FD4EA00B8E138 /* DFUStream.swift */; };
+		38C655061F5FD4EA00B8E138 /* DFUStreamBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654A81F5FD4EA00B8E138 /* DFUStreamBin.swift */; };
+		38C655071F5FD4EA00B8E138 /* DFUStreamHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654A91F5FD4EA00B8E138 /* DFUStreamHex.swift */; };
+		38C655081F5FD4EA00B8E138 /* DFUStreamZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654AA1F5FD4EA00B8E138 /* DFUStreamZip.swift */; };
+		38C655091F5FD4EA00B8E138 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654AB1F5FD4EA00B8E138 /* Double.swift */; };
+		38C6550A1F5FD4EA00B8E138 /* IntelHex2BinConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C654AD1F5FD4EA00B8E138 /* IntelHex2BinConverter.m */; };
+		38C6550B1F5FD4EA00B8E138 /* DFUControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654C51F5FD4EA00B8E138 /* DFUControlPoint.swift */; };
+		38C6550C1F5FD4EA00B8E138 /* DFUPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654C61F5FD4EA00B8E138 /* DFUPacket.swift */; };
+		38C6550D1F5FD4EA00B8E138 /* DFUVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654C71F5FD4EA00B8E138 /* DFUVersion.swift */; };
+		38C6550E1F5FD4EA00B8E138 /* LegacyDFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654C91F5FD4EA00B8E138 /* LegacyDFUExecutor.swift */; };
+		38C6550F1F5FD4EA00B8E138 /* LegacyDFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654CA1F5FD4EA00B8E138 /* LegacyDFUServiceInitiator.swift */; };
+		38C655101F5FD4EA00B8E138 /* LegacyDFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654CC1F5FD4EA00B8E138 /* LegacyDFUPeripheral.swift */; };
+		38C655111F5FD4EA00B8E138 /* LegacyDFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654CD1F5FD4EA00B8E138 /* LegacyDFUPeripheralDelegate.swift */; };
+		38C655121F5FD4EA00B8E138 /* LegacyDFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654CF1F5FD4EA00B8E138 /* LegacyDFUService.swift */; };
+		38C655131F5FD4EA00B8E138 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 38C654D01F5FD4EA00B8E138 /* LICENSE */; };
+		38C655141F5FD4EA00B8E138 /* LoggerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654D11F5FD4EA00B8E138 /* LoggerDelegate.swift */; };
+		38C655151F5FD4EA00B8E138 /* LoggerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654D21F5FD4EA00B8E138 /* LoggerHelper.swift */; };
+		38C655161F5FD4EA00B8E138 /* Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654D31F5FD4EA00B8E138 /* Manifest.swift */; };
+		38C655171F5FD4EA00B8E138 /* ManifestFirmwareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654D41F5FD4EA00B8E138 /* ManifestFirmwareInfo.swift */; };
+		38C655181F5FD4EA00B8E138 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 38C654D51F5FD4EA00B8E138 /* README.md */; };
+		38C655191F5FD4EA00B8E138 /* ButtonlessDFU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654D81F5FD4EA00B8E138 /* ButtonlessDFU.swift */; };
+		38C6551A1F5FD4EA00B8E138 /* SecureDFUControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654D91F5FD4EA00B8E138 /* SecureDFUControlPoint.swift */; };
+		38C6551B1F5FD4EA00B8E138 /* SecureDFUPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654DA1F5FD4EA00B8E138 /* SecureDFUPacket.swift */; };
+		38C6551C1F5FD4EA00B8E138 /* SecureDFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654DC1F5FD4EA00B8E138 /* SecureDFUExecutor.swift */; };
+		38C6551D1F5FD4EA00B8E138 /* SecureDFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654DD1F5FD4EA00B8E138 /* SecureDFUServiceInitiator.swift */; };
+		38C6551E1F5FD4EA00B8E138 /* SecureDFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654DF1F5FD4EA00B8E138 /* SecureDFUPeripheral.swift */; };
+		38C6551F1F5FD4EA00B8E138 /* SecureDFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654E01F5FD4EA00B8E138 /* SecureDFUPeripheralDelegate.swift */; };
+		38C655201F5FD4EA00B8E138 /* SecureDFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654E21F5FD4EA00B8E138 /* SecureDFUService.swift */; };
+		38C655211F5FD4EA00B8E138 /* SoftdeviceBootloaderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654E31F5FD4EA00B8E138 /* SoftdeviceBootloaderInfo.swift */; };
+		38C655221F5FD4EA00B8E138 /* ZipArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C654E41F5FD4EA00B8E138 /* ZipArchive.swift */; };
+		7E57D945914CF83B0BA86528 /* Pods_TestBridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7770E4B8AE655994DE02AEA7 /* Pods_TestBridgeTests.framework */; };
+		D5D3336B3B161616B927E4DE /* Pods_TestBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081D7F5FD822EA304A503D13 /* Pods_TestBridge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		387F2CCE1F3AED04006DBCDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 387F2CA91F3AED03006DBCDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 387F2CB01F3AED03006DBCDB;
+			remoteInfo = TestBridge;
+		};
+		387F2CD91F3AED04006DBCDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 387F2CA91F3AED03006DBCDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 387F2CB01F3AED03006DBCDB;
+			remoteInfo = TestBridge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		081D7F5FD822EA304A503D13 /* Pods_TestBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A74ABA2EFA58019D267B13A /* Pods-TestBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBridge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestBridge/Pods-TestBridge.debug.xcconfig"; sourceTree = "<group>"; };
+		1BF2AF2201D24DE74A743050 /* Pods_TestBridgeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestBridgeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		387F2CB11F3AED03006DBCDB /* TestBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		387F2CB51F3AED03006DBCDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		387F2CB71F3AED03006DBCDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		387F2CB81F3AED03006DBCDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		387F2CBA1F3AED03006DBCDB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		387F2CBB1F3AED03006DBCDB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		387F2CBE1F3AED03006DBCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		387F2CC11F3AED03006DBCDB /* TestBridge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestBridge.xcdatamodel; sourceTree = "<group>"; };
+		387F2CC31F3AED03006DBCDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		387F2CC61F3AED03006DBCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		387F2CC81F3AED03006DBCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		387F2CCD1F3AED04006DBCDB /* TestBridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestBridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		387F2CD11F3AED04006DBCDB /* TestBridgeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBridgeTests.m; sourceTree = "<group>"; };
+		387F2CD31F3AED04006DBCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		387F2CD81F3AED04006DBCDB /* TestBridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestBridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		387F2CDC1F3AED04006DBCDB /* TestBridgeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBridgeUITests.m; sourceTree = "<group>"; };
+		387F2CDE1F3AED04006DBCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		387F2CEA1F3AED1C006DBCDB /* TestBridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestBridge-Bridging-Header.h"; sourceTree = "<group>"; };
+		387F2CEB1F3AED1C006DBCDB /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		387F2CED1F3AEE25006DBCDB /* SwiftTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTest.swift; sourceTree = "<group>"; };
+		38B079D91F5FA6D200F5AA13 /* jiezhi_03.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = jiezhi_03.zip; sourceTree = "<group>"; };
+		38B079DA1F5FA6D200F5AA13 /* jiezhi_0715.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = jiezhi_0715.zip; sourceTree = "<group>"; };
+		38C654981F5FD4EA00B8E138 /* crc32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crc32.swift; sourceTree = "<group>"; };
+		38C654991F5FD4EA00B8E138 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		38C6549A1F5FD4EA00B8E138 /* DFUController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUController.swift; sourceTree = "<group>"; };
+		38C6549B1F5FD4EA00B8E138 /* DFUExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUExecutor.swift; sourceTree = "<group>"; };
+		38C6549C1F5FD4EA00B8E138 /* DFUFirmware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUFirmware.swift; sourceTree = "<group>"; };
+		38C6549D1F5FD4EA00B8E138 /* DFUPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUPeripheral.swift; sourceTree = "<group>"; };
+		38C6549E1F5FD4EA00B8E138 /* DFUPeripheralDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		38C6549F1F5FD4EA00B8E138 /* DFUPeripheralSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUPeripheralSelector.swift; sourceTree = "<group>"; };
+		38C654A01F5FD4EA00B8E138 /* DFUPeripheralSelectorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUPeripheralSelectorDelegate.swift; sourceTree = "<group>"; };
+		38C654A11F5FD4EA00B8E138 /* DFUService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUService.swift; sourceTree = "<group>"; };
+		38C654A21F5FD4EA00B8E138 /* DFUServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUServiceController.swift; sourceTree = "<group>"; };
+		38C654A31F5FD4EA00B8E138 /* DFUServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUServiceDelegate.swift; sourceTree = "<group>"; };
+		38C654A41F5FD4EA00B8E138 /* DFUServiceInitiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUServiceInitiator.swift; sourceTree = "<group>"; };
+		38C654A51F5FD4EA00B8E138 /* DFUServiceSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUServiceSelector.swift; sourceTree = "<group>"; };
+		38C654A61F5FD4EA00B8E138 /* DFUStarterPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUStarterPeripheral.swift; sourceTree = "<group>"; };
+		38C654A71F5FD4EA00B8E138 /* DFUStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUStream.swift; sourceTree = "<group>"; };
+		38C654A81F5FD4EA00B8E138 /* DFUStreamBin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUStreamBin.swift; sourceTree = "<group>"; };
+		38C654A91F5FD4EA00B8E138 /* DFUStreamHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUStreamHex.swift; sourceTree = "<group>"; };
+		38C654AA1F5FD4EA00B8E138 /* DFUStreamZip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUStreamZip.swift; sourceTree = "<group>"; };
+		38C654AB1F5FD4EA00B8E138 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		38C654AC1F5FD4EA00B8E138 /* IntelHex2BinConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelHex2BinConverter.h; sourceTree = "<group>"; };
+		38C654AD1F5FD4EA00B8E138 /* IntelHex2BinConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntelHex2BinConverter.m; sourceTree = "<group>"; };
+		38C654C51F5FD4EA00B8E138 /* DFUControlPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUControlPoint.swift; sourceTree = "<group>"; };
+		38C654C61F5FD4EA00B8E138 /* DFUPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUPacket.swift; sourceTree = "<group>"; };
+		38C654C71F5FD4EA00B8E138 /* DFUVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFUVersion.swift; sourceTree = "<group>"; };
+		38C654C91F5FD4EA00B8E138 /* LegacyDFUExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyDFUExecutor.swift; sourceTree = "<group>"; };
+		38C654CA1F5FD4EA00B8E138 /* LegacyDFUServiceInitiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyDFUServiceInitiator.swift; sourceTree = "<group>"; };
+		38C654CC1F5FD4EA00B8E138 /* LegacyDFUPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyDFUPeripheral.swift; sourceTree = "<group>"; };
+		38C654CD1F5FD4EA00B8E138 /* LegacyDFUPeripheralDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyDFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		38C654CF1F5FD4EA00B8E138 /* LegacyDFUService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyDFUService.swift; sourceTree = "<group>"; };
+		38C654D01F5FD4EA00B8E138 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		38C654D11F5FD4EA00B8E138 /* LoggerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerDelegate.swift; sourceTree = "<group>"; };
+		38C654D21F5FD4EA00B8E138 /* LoggerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerHelper.swift; sourceTree = "<group>"; };
+		38C654D31F5FD4EA00B8E138 /* Manifest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manifest.swift; sourceTree = "<group>"; };
+		38C654D41F5FD4EA00B8E138 /* ManifestFirmwareInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManifestFirmwareInfo.swift; sourceTree = "<group>"; };
+		38C654D51F5FD4EA00B8E138 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		38C654D81F5FD4EA00B8E138 /* ButtonlessDFU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonlessDFU.swift; sourceTree = "<group>"; };
+		38C654D91F5FD4EA00B8E138 /* SecureDFUControlPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDFUControlPoint.swift; sourceTree = "<group>"; };
+		38C654DA1F5FD4EA00B8E138 /* SecureDFUPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDFUPacket.swift; sourceTree = "<group>"; };
+		38C654DC1F5FD4EA00B8E138 /* SecureDFUExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDFUExecutor.swift; sourceTree = "<group>"; };
+		38C654DD1F5FD4EA00B8E138 /* SecureDFUServiceInitiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDFUServiceInitiator.swift; sourceTree = "<group>"; };
+		38C654DF1F5FD4EA00B8E138 /* SecureDFUPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDFUPeripheral.swift; sourceTree = "<group>"; };
+		38C654E01F5FD4EA00B8E138 /* SecureDFUPeripheralDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		38C654E21F5FD4EA00B8E138 /* SecureDFUService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDFUService.swift; sourceTree = "<group>"; };
+		38C654E31F5FD4EA00B8E138 /* SoftdeviceBootloaderInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftdeviceBootloaderInfo.swift; sourceTree = "<group>"; };
+		38C654E41F5FD4EA00B8E138 /* ZipArchive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipArchive.swift; sourceTree = "<group>"; };
+		4B7E3404E2F07D7784B2BEC4 /* Pods-TestBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBridge.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestBridge/Pods-TestBridge.release.xcconfig"; sourceTree = "<group>"; };
+		7770E4B8AE655994DE02AEA7 /* Pods_TestBridgeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestBridgeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF65CBE9460BF874B945D81D /* Pods-TestBridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBridgeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestBridgeTests/Pods-TestBridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9E145E66AC39AB8CA5DA708 /* Pods-TestBridgeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBridgeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestBridgeUITests/Pods-TestBridgeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E39D0D114903DB6EA73FF6BE /* Pods-TestBridgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBridgeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestBridgeTests/Pods-TestBridgeTests.release.xcconfig"; sourceTree = "<group>"; };
+		F192898AD73F521E4A326EDB /* Pods-TestBridgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBridgeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestBridgeUITests/Pods-TestBridgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		387F2CAE1F3AED03006DBCDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5D3336B3B161616B927E4DE /* Pods_TestBridge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387F2CCA1F3AED04006DBCDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E57D945914CF83B0BA86528 /* Pods_TestBridgeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387F2CD51F3AED04006DBCDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32953F17243030F7DC47776F /* Pods_TestBridgeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C40A88C7A081F85736BAC8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A74ABA2EFA58019D267B13A /* Pods-TestBridge.debug.xcconfig */,
+				4B7E3404E2F07D7784B2BEC4 /* Pods-TestBridge.release.xcconfig */,
+				AF65CBE9460BF874B945D81D /* Pods-TestBridgeTests.debug.xcconfig */,
+				E39D0D114903DB6EA73FF6BE /* Pods-TestBridgeTests.release.xcconfig */,
+				F192898AD73F521E4A326EDB /* Pods-TestBridgeUITests.debug.xcconfig */,
+				D9E145E66AC39AB8CA5DA708 /* Pods-TestBridgeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		387F2CA81F3AED03006DBCDB = {
+			isa = PBXGroup;
+			children = (
+				387F2CB31F3AED03006DBCDB /* TestBridge */,
+				387F2CD01F3AED04006DBCDB /* TestBridgeTests */,
+				387F2CDB1F3AED04006DBCDB /* TestBridgeUITests */,
+				387F2CB21F3AED03006DBCDB /* Products */,
+				1C40A88C7A081F85736BAC8E /* Pods */,
+				3C46BCD3638BFC923E1EE61A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		387F2CB21F3AED03006DBCDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				387F2CB11F3AED03006DBCDB /* TestBridge.app */,
+				387F2CCD1F3AED04006DBCDB /* TestBridgeTests.xctest */,
+				387F2CD81F3AED04006DBCDB /* TestBridgeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		387F2CB31F3AED03006DBCDB /* TestBridge */ = {
+			isa = PBXGroup;
+			children = (
+				387F2CB71F3AED03006DBCDB /* AppDelegate.h */,
+				387F2CB81F3AED03006DBCDB /* AppDelegate.m */,
+				387F2CBA1F3AED03006DBCDB /* ViewController.h */,
+				387F2CBB1F3AED03006DBCDB /* ViewController.m */,
+				387F2CEB1F3AED1C006DBCDB /* TestViewController.swift */,
+				387F2CED1F3AEE25006DBCDB /* SwiftTest.swift */,
+				38B079D91F5FA6D200F5AA13 /* jiezhi_03.zip */,
+				38B079DA1F5FA6D200F5AA13 /* jiezhi_0715.zip */,
+				387F2CBD1F3AED03006DBCDB /* Main.storyboard */,
+				387F2CC31F3AED03006DBCDB /* Assets.xcassets */,
+				387F2CC51F3AED03006DBCDB /* LaunchScreen.storyboard */,
+				387F2CC81F3AED03006DBCDB /* Info.plist */,
+				387F2CC01F3AED03006DBCDB /* TestBridge.xcdatamodeld */,
+				38C654971F5FD4EA00B8E138 /* iOSDFULibrary */,
+				387F2CB41F3AED03006DBCDB /* Supporting Files */,
+				387F2CEA1F3AED1C006DBCDB /* TestBridge-Bridging-Header.h */,
+			);
+			path = TestBridge;
+			sourceTree = "<group>";
+		};
+		387F2CB41F3AED03006DBCDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				387F2CB51F3AED03006DBCDB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		387F2CD01F3AED04006DBCDB /* TestBridgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				387F2CD11F3AED04006DBCDB /* TestBridgeTests.m */,
+				387F2CD31F3AED04006DBCDB /* Info.plist */,
+			);
+			path = TestBridgeTests;
+			sourceTree = "<group>";
+		};
+		387F2CDB1F3AED04006DBCDB /* TestBridgeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				387F2CDC1F3AED04006DBCDB /* TestBridgeUITests.m */,
+				387F2CDE1F3AED04006DBCDB /* Info.plist */,
+			);
+			path = TestBridgeUITests;
+			sourceTree = "<group>";
+		};
+		38C654971F5FD4EA00B8E138 /* iOSDFULibrary */ = {
+			isa = PBXGroup;
+			children = (
+				38C654981F5FD4EA00B8E138 /* crc32.swift */,
+				38C654991F5FD4EA00B8E138 /* Data.swift */,
+				38C6549A1F5FD4EA00B8E138 /* DFUController.swift */,
+				38C6549B1F5FD4EA00B8E138 /* DFUExecutor.swift */,
+				38C6549C1F5FD4EA00B8E138 /* DFUFirmware.swift */,
+				38C6549D1F5FD4EA00B8E138 /* DFUPeripheral.swift */,
+				38C6549E1F5FD4EA00B8E138 /* DFUPeripheralDelegate.swift */,
+				38C6549F1F5FD4EA00B8E138 /* DFUPeripheralSelector.swift */,
+				38C654A01F5FD4EA00B8E138 /* DFUPeripheralSelectorDelegate.swift */,
+				38C654A11F5FD4EA00B8E138 /* DFUService.swift */,
+				38C654A21F5FD4EA00B8E138 /* DFUServiceController.swift */,
+				38C654A31F5FD4EA00B8E138 /* DFUServiceDelegate.swift */,
+				38C654A41F5FD4EA00B8E138 /* DFUServiceInitiator.swift */,
+				38C654A51F5FD4EA00B8E138 /* DFUServiceSelector.swift */,
+				38C654A61F5FD4EA00B8E138 /* DFUStarterPeripheral.swift */,
+				38C654A71F5FD4EA00B8E138 /* DFUStream.swift */,
+				38C654A81F5FD4EA00B8E138 /* DFUStreamBin.swift */,
+				38C654A91F5FD4EA00B8E138 /* DFUStreamHex.swift */,
+				38C654AA1F5FD4EA00B8E138 /* DFUStreamZip.swift */,
+				38C654AB1F5FD4EA00B8E138 /* Double.swift */,
+				38C654AC1F5FD4EA00B8E138 /* IntelHex2BinConverter.h */,
+				38C654AD1F5FD4EA00B8E138 /* IntelHex2BinConverter.m */,
+				38C654AE1F5FD4EA00B8E138 /* iOSDFULibrary */,
+				38C654C31F5FD4EA00B8E138 /* LegacyDFU */,
+				38C654D01F5FD4EA00B8E138 /* LICENSE */,
+				38C654D11F5FD4EA00B8E138 /* LoggerDelegate.swift */,
+				38C654D21F5FD4EA00B8E138 /* LoggerHelper.swift */,
+				38C654D31F5FD4EA00B8E138 /* Manifest.swift */,
+				38C654D41F5FD4EA00B8E138 /* ManifestFirmwareInfo.swift */,
+				38C654D51F5FD4EA00B8E138 /* README.md */,
+				38C654D61F5FD4EA00B8E138 /* SecureDFU */,
+				38C654E31F5FD4EA00B8E138 /* SoftdeviceBootloaderInfo.swift */,
+				38C654E41F5FD4EA00B8E138 /* ZipArchive.swift */,
+			);
+			path = iOSDFULibrary;
+			sourceTree = "<group>";
+		};
+		38C654AE1F5FD4EA00B8E138 /* iOSDFULibrary */ = {
+			isa = PBXGroup;
+			children = (
+				38C654AF1F5FD4EA00B8E138 /* Classes */,
+			);
+			path = iOSDFULibrary;
+			sourceTree = "<group>";
+		};
+		38C654AF1F5FD4EA00B8E138 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				38C654B01F5FD4EA00B8E138 /* Implementation */,
+				38C654BD1F5FD4EA00B8E138 /* Utilities */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		38C654B01F5FD4EA00B8E138 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				38C654B11F5FD4EA00B8E138 /* GenericDFU */,
+				38C654B31F5FD4EA00B8E138 /* LegacyDFU */,
+				38C654B81F5FD4EA00B8E138 /* SecureDFU */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		38C654B11F5FD4EA00B8E138 /* GenericDFU */ = {
+			isa = PBXGroup;
+			children = (
+				38C654B21F5FD4EA00B8E138 /* DFU */,
+			);
+			path = GenericDFU;
+			sourceTree = "<group>";
+		};
+		38C654B21F5FD4EA00B8E138 /* DFU */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DFU;
+			sourceTree = "<group>";
+		};
+		38C654B31F5FD4EA00B8E138 /* LegacyDFU */ = {
+			isa = PBXGroup;
+			children = (
+				38C654B41F5FD4EA00B8E138 /* Characteristics */,
+				38C654B51F5FD4EA00B8E138 /* DFU */,
+				38C654B61F5FD4EA00B8E138 /* Peripherals */,
+				38C654B71F5FD4EA00B8E138 /* Services */,
+			);
+			path = LegacyDFU;
+			sourceTree = "<group>";
+		};
+		38C654B41F5FD4EA00B8E138 /* Characteristics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Characteristics;
+			sourceTree = "<group>";
+		};
+		38C654B51F5FD4EA00B8E138 /* DFU */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DFU;
+			sourceTree = "<group>";
+		};
+		38C654B61F5FD4EA00B8E138 /* Peripherals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Peripherals;
+			sourceTree = "<group>";
+		};
+		38C654B71F5FD4EA00B8E138 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		38C654B81F5FD4EA00B8E138 /* SecureDFU */ = {
+			isa = PBXGroup;
+			children = (
+				38C654B91F5FD4EA00B8E138 /* Characteristics */,
+				38C654BA1F5FD4EA00B8E138 /* DFU */,
+				38C654BB1F5FD4EA00B8E138 /* Peripheral */,
+				38C654BC1F5FD4EA00B8E138 /* Services */,
+			);
+			path = SecureDFU;
+			sourceTree = "<group>";
+		};
+		38C654B91F5FD4EA00B8E138 /* Characteristics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Characteristics;
+			sourceTree = "<group>";
+		};
+		38C654BA1F5FD4EA00B8E138 /* DFU */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DFU;
+			sourceTree = "<group>";
+		};
+		38C654BB1F5FD4EA00B8E138 /* Peripheral */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Peripheral;
+			sourceTree = "<group>";
+		};
+		38C654BC1F5FD4EA00B8E138 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		38C654BD1F5FD4EA00B8E138 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				38C654BE1F5FD4EA00B8E138 /* DFUPackage */,
+				38C654C01F5FD4EA00B8E138 /* HexToBinConverter */,
+				38C654C11F5FD4EA00B8E138 /* Logging */,
+				38C654C21F5FD4EA00B8E138 /* Streams */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		38C654BE1F5FD4EA00B8E138 /* DFUPackage */ = {
+			isa = PBXGroup;
+			children = (
+				38C654BF1F5FD4EA00B8E138 /* Manifest */,
+			);
+			path = DFUPackage;
+			sourceTree = "<group>";
+		};
+		38C654BF1F5FD4EA00B8E138 /* Manifest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manifest;
+			sourceTree = "<group>";
+		};
+		38C654C01F5FD4EA00B8E138 /* HexToBinConverter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HexToBinConverter;
+			sourceTree = "<group>";
+		};
+		38C654C11F5FD4EA00B8E138 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		38C654C21F5FD4EA00B8E138 /* Streams */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Streams;
+			sourceTree = "<group>";
+		};
+		38C654C31F5FD4EA00B8E138 /* LegacyDFU */ = {
+			isa = PBXGroup;
+			children = (
+				38C654C41F5FD4EA00B8E138 /* Characteristics */,
+				38C654C81F5FD4EA00B8E138 /* DFU */,
+				38C654CB1F5FD4EA00B8E138 /* Peripherals */,
+				38C654CE1F5FD4EA00B8E138 /* Services */,
+			);
+			path = LegacyDFU;
+			sourceTree = "<group>";
+		};
+		38C654C41F5FD4EA00B8E138 /* Characteristics */ = {
+			isa = PBXGroup;
+			children = (
+				38C654C51F5FD4EA00B8E138 /* DFUControlPoint.swift */,
+				38C654C61F5FD4EA00B8E138 /* DFUPacket.swift */,
+				38C654C71F5FD4EA00B8E138 /* DFUVersion.swift */,
+			);
+			path = Characteristics;
+			sourceTree = "<group>";
+		};
+		38C654C81F5FD4EA00B8E138 /* DFU */ = {
+			isa = PBXGroup;
+			children = (
+				38C654C91F5FD4EA00B8E138 /* LegacyDFUExecutor.swift */,
+				38C654CA1F5FD4EA00B8E138 /* LegacyDFUServiceInitiator.swift */,
+			);
+			path = DFU;
+			sourceTree = "<group>";
+		};
+		38C654CB1F5FD4EA00B8E138 /* Peripherals */ = {
+			isa = PBXGroup;
+			children = (
+				38C654CC1F5FD4EA00B8E138 /* LegacyDFUPeripheral.swift */,
+				38C654CD1F5FD4EA00B8E138 /* LegacyDFUPeripheralDelegate.swift */,
+			);
+			path = Peripherals;
+			sourceTree = "<group>";
+		};
+		38C654CE1F5FD4EA00B8E138 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				38C654CF1F5FD4EA00B8E138 /* LegacyDFUService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		38C654D61F5FD4EA00B8E138 /* SecureDFU */ = {
+			isa = PBXGroup;
+			children = (
+				38C654D71F5FD4EA00B8E138 /* Characteristics */,
+				38C654DB1F5FD4EA00B8E138 /* DFU */,
+				38C654DE1F5FD4EA00B8E138 /* Peripheral */,
+				38C654E11F5FD4EA00B8E138 /* Services */,
+			);
+			path = SecureDFU;
+			sourceTree = "<group>";
+		};
+		38C654D71F5FD4EA00B8E138 /* Characteristics */ = {
+			isa = PBXGroup;
+			children = (
+				38C654D81F5FD4EA00B8E138 /* ButtonlessDFU.swift */,
+				38C654D91F5FD4EA00B8E138 /* SecureDFUControlPoint.swift */,
+				38C654DA1F5FD4EA00B8E138 /* SecureDFUPacket.swift */,
+			);
+			path = Characteristics;
+			sourceTree = "<group>";
+		};
+		38C654DB1F5FD4EA00B8E138 /* DFU */ = {
+			isa = PBXGroup;
+			children = (
+				38C654DC1F5FD4EA00B8E138 /* SecureDFUExecutor.swift */,
+				38C654DD1F5FD4EA00B8E138 /* SecureDFUServiceInitiator.swift */,
+			);
+			path = DFU;
+			sourceTree = "<group>";
+		};
+		38C654DE1F5FD4EA00B8E138 /* Peripheral */ = {
+			isa = PBXGroup;
+			children = (
+				38C654DF1F5FD4EA00B8E138 /* SecureDFUPeripheral.swift */,
+				38C654E01F5FD4EA00B8E138 /* SecureDFUPeripheralDelegate.swift */,
+			);
+			path = Peripheral;
+			sourceTree = "<group>";
+		};
+		38C654E11F5FD4EA00B8E138 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				38C654E21F5FD4EA00B8E138 /* SecureDFUService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3C46BCD3638BFC923E1EE61A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				081D7F5FD822EA304A503D13 /* Pods_TestBridge.framework */,
+				7770E4B8AE655994DE02AEA7 /* Pods_TestBridgeTests.framework */,
+				1BF2AF2201D24DE74A743050 /* Pods_TestBridgeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		387F2CB01F3AED03006DBCDB /* TestBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 387F2CE11F3AED04006DBCDB /* Build configuration list for PBXNativeTarget "TestBridge" */;
+			buildPhases = (
+				F05D6EB49981BE2B845BED03 /* [CP] Check Pods Manifest.lock */,
+				387F2CAD1F3AED03006DBCDB /* Sources */,
+				387F2CAE1F3AED03006DBCDB /* Frameworks */,
+				387F2CAF1F3AED03006DBCDB /* Resources */,
+				A137E46D3C79131A1F59F179 /* [CP] Embed Pods Frameworks */,
+				83CE321AC36530B0AF1239AC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestBridge;
+			productName = TestBridge;
+			productReference = 387F2CB11F3AED03006DBCDB /* TestBridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		387F2CCC1F3AED04006DBCDB /* TestBridgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 387F2CE41F3AED04006DBCDB /* Build configuration list for PBXNativeTarget "TestBridgeTests" */;
+			buildPhases = (
+				F7F811D970A9E1A91A96B34B /* [CP] Check Pods Manifest.lock */,
+				387F2CC91F3AED04006DBCDB /* Sources */,
+				387F2CCA1F3AED04006DBCDB /* Frameworks */,
+				387F2CCB1F3AED04006DBCDB /* Resources */,
+				C6746A373112A215374249DF /* [CP] Embed Pods Frameworks */,
+				99285416B912451AF1E85995 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				387F2CCF1F3AED04006DBCDB /* PBXTargetDependency */,
+			);
+			name = TestBridgeTests;
+			productName = TestBridgeTests;
+			productReference = 387F2CCD1F3AED04006DBCDB /* TestBridgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		387F2CD71F3AED04006DBCDB /* TestBridgeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 387F2CE71F3AED04006DBCDB /* Build configuration list for PBXNativeTarget "TestBridgeUITests" */;
+			buildPhases = (
+				0B53FE0855EDF952909A2F51 /* [CP] Check Pods Manifest.lock */,
+				387F2CD41F3AED04006DBCDB /* Sources */,
+				387F2CD51F3AED04006DBCDB /* Frameworks */,
+				387F2CD61F3AED04006DBCDB /* Resources */,
+				EF2496E0621EC160ED03817A /* [CP] Embed Pods Frameworks */,
+				7194E21EEB79CF5C08FED30A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				387F2CDA1F3AED04006DBCDB /* PBXTargetDependency */,
+			);
+			name = TestBridgeUITests;
+			productName = TestBridgeUITests;
+			productReference = 387F2CD81F3AED04006DBCDB /* TestBridgeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		387F2CA91F3AED03006DBCDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = HY;
+				TargetAttributes = {
+					387F2CB01F3AED03006DBCDB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7955BVLGNM;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					387F2CCC1F3AED04006DBCDB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7955BVLGNM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 387F2CB01F3AED03006DBCDB;
+					};
+					387F2CD71F3AED04006DBCDB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7955BVLGNM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 387F2CB01F3AED03006DBCDB;
+					};
+				};
+			};
+			buildConfigurationList = 387F2CAC1F3AED03006DBCDB /* Build configuration list for PBXProject "TestBridge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 387F2CA81F3AED03006DBCDB;
+			productRefGroup = 387F2CB21F3AED03006DBCDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				387F2CB01F3AED03006DBCDB /* TestBridge */,
+				387F2CCC1F3AED04006DBCDB /* TestBridgeTests */,
+				387F2CD71F3AED04006DBCDB /* TestBridgeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		387F2CAF1F3AED03006DBCDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38C655131F5FD4EA00B8E138 /* LICENSE in Resources */,
+				387F2CC71F3AED03006DBCDB /* LaunchScreen.storyboard in Resources */,
+				387F2CC41F3AED03006DBCDB /* Assets.xcassets in Resources */,
+				387F2CBF1F3AED03006DBCDB /* Main.storyboard in Resources */,
+				38B079DB1F5FA6D200F5AA13 /* jiezhi_03.zip in Resources */,
+				38B079DC1F5FA6D200F5AA13 /* jiezhi_0715.zip in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387F2CCB1F3AED04006DBCDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387F2CD61F3AED04006DBCDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B53FE0855EDF952909A2F51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7194E21EEB79CF5C08FED30A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestBridgeUITests/Pods-TestBridgeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83CE321AC36530B0AF1239AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestBridge/Pods-TestBridge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99285416B912451AF1E85995 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestBridgeTests/Pods-TestBridgeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A137E46D3C79131A1F59F179 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestBridge/Pods-TestBridge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6746A373112A215374249DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestBridgeTests/Pods-TestBridgeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF2496E0621EC160ED03817A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestBridgeUITests/Pods-TestBridgeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F05D6EB49981BE2B845BED03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7F811D970A9E1A91A96B34B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		387F2CAD1F3AED03006DBCDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387F2CEC1F3AED1C006DBCDB /* TestViewController.swift in Sources */,
+				38C654FB1F5FD4EA00B8E138 /* DFUPeripheral.swift in Sources */,
+				387F2CC21F3AED03006DBCDB /* TestBridge.xcdatamodeld in Sources */,
+				38C654F61F5FD4EA00B8E138 /* crc32.swift in Sources */,
+				38C6550F1F5FD4EA00B8E138 /* LegacyDFUServiceInitiator.swift in Sources */,
+				38C654FD1F5FD4EA00B8E138 /* DFUPeripheralSelector.swift in Sources */,
+				387F2CBC1F3AED03006DBCDB /* ViewController.m in Sources */,
+				38C655091F5FD4EA00B8E138 /* Double.swift in Sources */,
+				38C654FC1F5FD4EA00B8E138 /* DFUPeripheralDelegate.swift in Sources */,
+				38C655031F5FD4EA00B8E138 /* DFUServiceSelector.swift in Sources */,
+				38C6551F1F5FD4EA00B8E138 /* SecureDFUPeripheralDelegate.swift in Sources */,
+				38C655041F5FD4EA00B8E138 /* DFUStarterPeripheral.swift in Sources */,
+				38C6550C1F5FD4EA00B8E138 /* DFUPacket.swift in Sources */,
+				38C655171F5FD4EA00B8E138 /* ManifestFirmwareInfo.swift in Sources */,
+				38C654FF1F5FD4EA00B8E138 /* DFUService.swift in Sources */,
+				38C655111F5FD4EA00B8E138 /* LegacyDFUPeripheralDelegate.swift in Sources */,
+				38C655001F5FD4EA00B8E138 /* DFUServiceController.swift in Sources */,
+				38C6551C1F5FD4EA00B8E138 /* SecureDFUExecutor.swift in Sources */,
+				38C655141F5FD4EA00B8E138 /* LoggerDelegate.swift in Sources */,
+				38C654F81F5FD4EA00B8E138 /* DFUController.swift in Sources */,
+				38C6550A1F5FD4EA00B8E138 /* IntelHex2BinConverter.m in Sources */,
+				38C655221F5FD4EA00B8E138 /* ZipArchive.swift in Sources */,
+				38C655151F5FD4EA00B8E138 /* LoggerHelper.swift in Sources */,
+				38C654F91F5FD4EA00B8E138 /* DFUExecutor.swift in Sources */,
+				387F2CEE1F3AEE25006DBCDB /* SwiftTest.swift in Sources */,
+				38C654FA1F5FD4EA00B8E138 /* DFUFirmware.swift in Sources */,
+				38C655211F5FD4EA00B8E138 /* SoftdeviceBootloaderInfo.swift in Sources */,
+				38C6550B1F5FD4EA00B8E138 /* DFUControlPoint.swift in Sources */,
+				38C655121F5FD4EA00B8E138 /* LegacyDFUService.swift in Sources */,
+				38C655191F5FD4EA00B8E138 /* ButtonlessDFU.swift in Sources */,
+				387F2CB91F3AED03006DBCDB /* AppDelegate.m in Sources */,
+				38C6550E1F5FD4EA00B8E138 /* LegacyDFUExecutor.swift in Sources */,
+				38C655061F5FD4EA00B8E138 /* DFUStreamBin.swift in Sources */,
+				38C6550D1F5FD4EA00B8E138 /* DFUVersion.swift in Sources */,
+				38C654FE1F5FD4EA00B8E138 /* DFUPeripheralSelectorDelegate.swift in Sources */,
+				38C6551A1F5FD4EA00B8E138 /* SecureDFUControlPoint.swift in Sources */,
+				38C655011F5FD4EA00B8E138 /* DFUServiceDelegate.swift in Sources */,
+				38C655201F5FD4EA00B8E138 /* SecureDFUService.swift in Sources */,
+				38C655051F5FD4EA00B8E138 /* DFUStream.swift in Sources */,
+				38C655101F5FD4EA00B8E138 /* LegacyDFUPeripheral.swift in Sources */,
+				38C655081F5FD4EA00B8E138 /* DFUStreamZip.swift in Sources */,
+				38C6551E1F5FD4EA00B8E138 /* SecureDFUPeripheral.swift in Sources */,
+				38C6551D1F5FD4EA00B8E138 /* SecureDFUServiceInitiator.swift in Sources */,
+				38C654F71F5FD4EA00B8E138 /* Data.swift in Sources */,
+				38C6551B1F5FD4EA00B8E138 /* SecureDFUPacket.swift in Sources */,
+				38C655161F5FD4EA00B8E138 /* Manifest.swift in Sources */,
+				387F2CB61F3AED03006DBCDB /* main.m in Sources */,
+				38C655071F5FD4EA00B8E138 /* DFUStreamHex.swift in Sources */,
+				38C655181F5FD4EA00B8E138 /* README.md in Sources */,
+				38C655021F5FD4EA00B8E138 /* DFUServiceInitiator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387F2CC91F3AED04006DBCDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387F2CD21F3AED04006DBCDB /* TestBridgeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387F2CD41F3AED04006DBCDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387F2CDD1F3AED04006DBCDB /* TestBridgeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		387F2CCF1F3AED04006DBCDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 387F2CB01F3AED03006DBCDB /* TestBridge */;
+			targetProxy = 387F2CCE1F3AED04006DBCDB /* PBXContainerItemProxy */;
+		};
+		387F2CDA1F3AED04006DBCDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 387F2CB01F3AED03006DBCDB /* TestBridge */;
+			targetProxy = 387F2CD91F3AED04006DBCDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		387F2CBD1F3AED03006DBCDB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				387F2CBE1F3AED03006DBCDB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		387F2CC51F3AED03006DBCDB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				387F2CC61F3AED03006DBCDB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		387F2CDF1F3AED04006DBCDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		387F2CE01F3AED04006DBCDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		387F2CE21F3AED04006DBCDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A74ABA2EFA58019D267B13A /* Pods-TestBridge.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7955BVLGNM;
+				INFOPLIST_FILE = TestBridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanyouapp.com.TestBridge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "$(SRCROOT)/Zip/Zip/minizip/";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestBridge/TestBridge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		387F2CE31F3AED04006DBCDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B7E3404E2F07D7784B2BEC4 /* Pods-TestBridge.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7955BVLGNM;
+				INFOPLIST_FILE = TestBridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanyouapp.com.TestBridge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "$(SRCROOT)/Zip/Zip/minizip/";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestBridge/TestBridge-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		387F2CE51F3AED04006DBCDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF65CBE9460BF874B945D81D /* Pods-TestBridgeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7955BVLGNM;
+				INFOPLIST_FILE = TestBridgeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanyouapp.com.TestBridgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestBridge.app/TestBridge";
+			};
+			name = Debug;
+		};
+		387F2CE61F3AED04006DBCDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E39D0D114903DB6EA73FF6BE /* Pods-TestBridgeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7955BVLGNM;
+				INFOPLIST_FILE = TestBridgeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanyouapp.com.TestBridgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestBridge.app/TestBridge";
+			};
+			name = Release;
+		};
+		387F2CE81F3AED04006DBCDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F192898AD73F521E4A326EDB /* Pods-TestBridgeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 7955BVLGNM;
+				INFOPLIST_FILE = TestBridgeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanyouapp.com.TestBridgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TestBridge;
+			};
+			name = Debug;
+		};
+		387F2CE91F3AED04006DBCDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9E145E66AC39AB8CA5DA708 /* Pods-TestBridgeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 7955BVLGNM;
+				INFOPLIST_FILE = TestBridgeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanyouapp.com.TestBridgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TestBridge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		387F2CAC1F3AED03006DBCDB /* Build configuration list for PBXProject "TestBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				387F2CDF1F3AED04006DBCDB /* Debug */,
+				387F2CE01F3AED04006DBCDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		387F2CE11F3AED04006DBCDB /* Build configuration list for PBXNativeTarget "TestBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				387F2CE21F3AED04006DBCDB /* Debug */,
+				387F2CE31F3AED04006DBCDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		387F2CE41F3AED04006DBCDB /* Build configuration list for PBXNativeTarget "TestBridgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				387F2CE51F3AED04006DBCDB /* Debug */,
+				387F2CE61F3AED04006DBCDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		387F2CE71F3AED04006DBCDB /* Build configuration list for PBXNativeTarget "TestBridgeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				387F2CE81F3AED04006DBCDB /* Debug */,
+				387F2CE91F3AED04006DBCDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		387F2CC01F3AED03006DBCDB /* TestBridge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				387F2CC11F3AED03006DBCDB /* TestBridge.xcdatamodel */,
+			);
+			currentVersion = 387F2CC11F3AED03006DBCDB /* TestBridge.xcdatamodel */;
+			path = TestBridge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 387F2CA91F3AED03006DBCDB /* Project object */;
+}

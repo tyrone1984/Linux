@@ -1,0 +1,17 @@
+账号管理文档
+一、开发者账号
+1.公司级的开发者账号
+	账号：443701937@qq.com
+	密码： 1678594362Ab
+2.企业级的开发者账号
+	账号：hanyou28@hanyouapp.com
+	密码： HYApp2013hy
+
+二、发布测试包
+1.蒲公英托管（http://www.pgyer.com/）
+	账号：hanyou28@hanyouapp.com
+	密码： HYApp2015hy
+
+2. FIR (http://fir.im/)
+	账号：hanyou28@hanyouapp.com
+	密码： HYApp2016hy

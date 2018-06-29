@@ -1,0 +1,91 @@
+
+#pragma mark - 三方登录
+
+- (void)thirdPartLoginWithUMSocialAccountEntity:(UMSocialAccountEntity *)entity {
+    NSDictionary *parameters = @{@"openid"  : entity.unionId?:@"",
+                                 @"expires_in"  : [NSString stringWithFormat:@"%zd", [entity.expirationDate timeIntervalSince1970]]?:@"",
+                                 @"access_token"    : entity.accessToken?:@"",
+                                 @"refresh_token"   : entity.refreshToken?:@"",
+                                 @"headimg"   : entity.iconURL?:@"",
+                                 @"userNickname"   : entity.userName?:@"",
+                                 };
+    [[ZJLoginManager shareManager] thirdPardLoginWithParams:parameters mentionText:nil completion:^(id obj) {
+        if (obj) {
+            [self login];
+        }
+    }];
+}
+
+#pragma mark - Event Response
+
+- (IBAction)thirdPartLoginButtonDidClicked:(UIButton *)sender {
+    HYLoginType loginType = (HYLoginType)sender.tag;
+    UMSocialSnsPlatform *snsPlatform;
+    switch (loginType) {
+        case HYLoginTypeWeixin: {
+            NSLog(@"微信登录");
+            snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];
+        }
+            break;
+        case HYLoginTypeQQ: {
+            NSLog(@"QQ登录");
+            snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQQ];
+        }
+            break;
+        case HYLoginTypeWeibo: {
+            NSLog(@"微博登录");
+            snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
+        }
+            break;
+        default:
+            break;
+    }
+    
+    snsPlatform.loginClickHandler(self, [UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response) {
+        if (response.responseCode == UMSResponseCodeSuccess) {
+            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+            UMSocialAccountEntity *snsAccount = [dict valueForKey:snsPlatform.platformName];
+            HYUser *usr = [HYUser currentUser];
+            usr.name = snsAccount.userName;
+            usr.headIconPath = snsAccount.iconURL;
+            switch (loginType) {
+                case HYLoginTypeWeixin: {
+                    NSLog(@"微信登录");
+                    usr.userName = snsAccount.userName;
+                }
+                    break;
+                case HYLoginTypeQQ: {
+                    NSLog(@"QQ登录");
+                    usr.userName = snsAccount.openId;
+                }
+                    break;
+                case HYLoginTypeWeibo: {
+                    NSLog(@"微博登录");
+                    usr.userName = snsAccount.usid;
+                }
+                    break;
+                default:
+                    break;
+            }
+            NSLog(@"%@", dict);
+            
+            [self thirdPartLoginWithUMSocialAccountEntity:snsAccount];
+        } else {
+            [MBProgressHUD showText:response.message];
+        }
+    });
+}
+
+//
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    
+//    self.navigationController.delegate = nil;
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor clearColor]] forBarMetrics:UIBarMetricsDefault];
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.delegate = ((ZJNavigationController *)self.navigationController);
+//}

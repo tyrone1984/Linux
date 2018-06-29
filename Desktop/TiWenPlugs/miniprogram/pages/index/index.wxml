@@ -1,0 +1,11 @@
+<view class="container">
+  <button class='botom-search' bindtap='searchDevice'>搜索设备</button>
+
+  <view wx:if='{{devices.length==0}}'>
+    <view class='no-device'>暂未搜索到设备</view>
+  </view>
+
+  <view class='device-item' wx:for="{{devices}}">
+    <view class='device-name' hover-class="hover_access" hover-stay-time="150" bindtap='connectDevice' data-index='{{index}}'>{{item.name}}</view>
+  </view>
+</view>

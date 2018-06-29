@@ -1,0 +1,6 @@
+dic = {
+    errorCode = 111111;
+    msg = "\U767b\U5f55\U6210\U529f";
+    type = 1;
+    userId = 55;
+}

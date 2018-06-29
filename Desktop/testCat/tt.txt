@@ -1,0 +1,9 @@
+>wooooo
+>东西南北
+eof
+>eof
+>EOF
+
+
+[A[A
+<<EOF

@@ -1,0 +1,29 @@
+
+- (void)createProgressView {
+    _progressHUD = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:_progressHUD];
+}
+
+- (void)requestData {
+    NSDictionary *params = @{
+                             @"action" : @"getMyDoctorList",
+                             @"userid" : @(kNetID),
+                             };
+    _progressHUD.labelText = @"...";
+    [_progressHUD show:YES];
+    
+    [[HYMineManager shareManager] requestMineDoctorListWithParams:params completion:^(id obj, NSString *msg) {
+        _progressHUD.labelText = msg;
+        [_progressHUD hide:YES afterDelay:1.0];
+        
+        if (obj) {
+            
+        }
+    }];
+}
+
+    if (value.length == 0) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"" delegate:nil cancelButtonTitle:@"" otherButtonTitles:nil];
+        [alertView show];
+        return;
+    }

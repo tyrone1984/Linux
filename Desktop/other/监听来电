@@ -1,0 +1,53 @@
+
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
+#import <CoreTelephony/CTCallCenter.h>
+#import <CoreTelephony/CTCall.h>
+
+
+@property (nonatomic, strong) CTCallCenter *callCenter;
+    _callCenter = [CTCallCenter new];
+    _callCenter.callEventHandler = ^(CTCall * _Nonnull call) {
+        if([call.callState isEqualToString:CTCallStateDisconnected])
+            
+        {
+            NSLog(@"Call has been disconnected");
+        }
+        
+        else if([call.callState isEqualToString:CTCallStateConnected])
+            
+        {
+            NSLog(@"Callhasjustbeen connected");
+        }
+        
+        else if([call.callState isEqualToString:CTCallStateIncoming])
+            
+        {
+            NSLog(@"Call is incoming");
+        }
+        
+        else if([call.callState isEqualToString:CTCallStateDialing])
+            
+        {
+            NSLog(@"Call is Dialing");
+        }
+        
+        else
+        {
+            NSLog(@"Nothing is done");
+        }
+    };
+    
+    
+    // 获取运营商信息
+    CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier *carrier = info.subscriberCellularProvider;
+    NSLog(@"carrier:%@", [carrier description]);
+    
+    // 如果运营商变化将更新运营商输出
+    info.subscriberCellularProviderDidUpdateNotifier = ^(CTCarrier *carrier) {
+        NSLog(@"carrier:%@", [carrier description]);
+    };
+    
+    // 输出手机的数据业务信息
+    NSLog(@"Radio Access Technology:%@", info.currentRadioAccessTechnology);

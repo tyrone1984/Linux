@@ -1,0 +1,113 @@
+    NSData *data = advertisementData[@"kCBAdvDataManufacturerData"];
+    device.manufacturerData = data;
+    if (data.length) {
+        Byte *bytes = (Byte *)data.bytes;
+        device.hasRegister = bytes[4] == 0x01;        
+    }
+
+
+
+- (void)readValueWithType:(ReadDataType)type completion:(DeviceUpdateValueCompletionHandle)completion {
+    self.readDataType = type;
+    self.valueCompletion = completion;
+    
+    if (type == ReadDataTypeOfBP) {
+        Byte bytes[] = {0xFD, 0xFD, 0xFA, 0x05, 0X0D, 0x0A};
+        NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)/sizeof(Byte)];
+        [self writeWithData:data type:CBCharacteristicWriteWithoutResponse];
+    }else if (type == ReadDataTypeOfTZ) {
+        Byte deviceID[] = {0x11, 0x02, 0X03, 0x04, 0x05, 0x06};
+        self.deviceID = deviceID;
+        
+        if (!self.hasRegister) {
+            Byte bytes[] = {0x10, 0x09, 0x00, 0x01, 0x11, 0x02, 0X03, 0x04, 0x05, 0x06, 0x01};
+            NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)/sizeof(Byte)];
+            [self.peripheral writeValue:data forCharacteristic:self.writeWNCharacteristic type:CBCharacteristicWriteWithoutResponse];
+        }else {
+            
+        }
+    }
+}
+
+        if(self.readDataType == ReadDataTypeOfTZ) {
+            if (!self.hasRegister) {
+                if (!_hasSendACKBack1) {
+                    if (data.length == 3 && bytes[1] == 0x01) { // 注册设备请求的数据确认包
+                        if (!_hasACK1) {
+                            _hasACK1 = YES;
+                        }
+                    }
+                    if (data.length == 5 && bytes[1] == 0x03 && [characteristic.UUID.UUIDString isEqualToString:TZNOTIFYReceiveCTUUID]) { // 注册设备请求的数据确认包
+                        if (!_hasACK2) {
+                            _hasACK2 = YES;
+                        }
+                    }
+                    if (_hasACK1 && _hasACK2 && _hasSendACKBack1 == NO) {
+                        _hasSendACKBack1 = YES;
+                        [self ackBack];
+                    }
+                }
+            }else {
+                if (data.length == 12 && bytes[2] == 0x00 && bytes[3] == 0x07 && _hasSendACKBack2 == NO) { // 同步数据请求数据确认包
+                    [self ackBack];
+                    [self loginBack];
+                }else if (data.length == 3 && _loginACK == NO) {   // 登录回复数据包确认
+                    _loginACK = YES;
+                    [self synData];
+                }else if (data.length == 18) {
+                    NSLog(@"同步数据确认");
+                    _synACK = YES;
+                    
+                    NSInteger value = [data valueWithIdx1:11 idx2:10];  // 体重
+                    NSLog(@"value = %f", value/100.0);
+                    
+                    short flagValue0 = [data valueWithIdx1:9 idx2:8];
+                    short flagValue1 = BitChange(flagValue0);
+                    NSLog(@"%zd", flagValue1);
+                    
+                    Byte byte1 = (flagValue1 & 0xff00) >> 8;
+                    Byte byte2 = (flagValue1 & 0xff);
+                    NSLog(@"byte1 = %zd, byte2 = %zd", byte1, byte2);
+
+                    short flagBits[13];     // 2-14位
+                    short byteLens[13] = {1, 4, 1, 7, 2, 2, 2, 2, 2, 2, 2, 2, 2};   // 每位存在的话对应的数值的byte长度
+                    int byteValues[13];     // 每位存在的话对应的数值
+                    
+
+                    for (int i = 0; i < 14; i++) {
+                        if (i < 6) {
+                            flagBits[i] = byte1 & (0x20 >> i);
+                            NSLog(@"0x%02x, 0x%02x, i = %zd", byte1, (0x20 >> i), i);
+                        }else {
+                            flagBits[i] = byte2 & (0x80 >> (i-6));
+                            NSLog(@"0x%02x, 0x%02x, i = %zd", byte2, (0x80 >> (i-6)), i);
+                        }
+                    }
+                    short byteLenOffset = 0;
+                    
+                    for (int i = 0; i < 14; i++) {
+                        short flagBit = flagBits[i];
+                        if (flagBit > 0) {
+                            short byteLen = byteLens[i];
+                            
+                            int byteVal[4];
+                            int byteValue = 0;
+                            for (int j = 0; j < byteLen; j++) {
+                                int a = (bytes[12 + byteLenOffset + j] & 0xff) << ((byteLen-1-j)*8);// 说明二
+                                NSLog(@"i = %zd, j = %zd, index = %zd, 0x%02x, offset = %zd", i, j, 12 + byteLenOffset + j, bytes[12 + byteLenOffset + j] & 0xff, (byteLen-1-j)*8);
+
+                                byteVal[j] = a;
+                            }
+                            for (int j = 0; j < byteLen; j++) {
+                                byteValue |= byteVal[j];
+                            }
+                            byteValues[i] = byteValue;
+                            byteLenOffset += byteLen;
+                        }
+                    }
+                    //[self ackBack];
+
+//                    if (self.valueCompletion) {
+//                        self.valueCompletion(YES, @[@(value*0.01), @(value2)], error);
+//                    }
+                }
